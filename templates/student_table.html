@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>{{valueSent}}</h2>
+<table class="table table-bordered table-hover table-responsive" border="1">
+    <caption>Student Repository Data</caption>
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Student</th>
+        <th scope="col">CWID</th>
+        <th scope="col">Course</th>
+        <th scope="col">Grade</th>
+        <th scope="col">Instructor</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for s in students %}
+    <tr>
+        <td>{{s.student}}</td>
+        <td>{{s.cwid}}</td>
+        <td>{{s.course}}</td>
+        <td>{{s.grade}}</td>
+        <td>{{s.instructor}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
